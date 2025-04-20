@@ -74,7 +74,7 @@ body {
 }
 
 form .row input:focus {
-  border-color: #16a085;
+  border-color: rgb(35, 81, 235);
   box-shadow: inset 0px 0px 2px 2px rgba(26, 188, 156, 0.25);
 }
 
@@ -88,8 +88,8 @@ form .row input::placeholder {
   height: 100%;
   color: #fff;
   font-size: 18px;
-  background: #16a085;
-  border: 1px solid #16a085;
+  background: rgb(35, 81, 235);
+  border: 1px solid rgb(35, 81, 235);
   border-radius: 5px 0 0 5px;
   display: flex;
   align-items: center;
@@ -101,7 +101,7 @@ form .row input::placeholder {
 }
 
 .wrapper form .pass a {
-  color: #16a085;
+  color:rgb(35, 81, 235);
   font-size: 17px;
   text-decoration: none;
 }
@@ -124,18 +124,4 @@ form .button input:hover {
   background: blue;
 }
 
-.wrapper form .signup-link {
-  text-align: center;
-  margin-top: 25px;
-  /* font-size: 17px; */
-  padding-right: 20px;
-}
 
-.wrapper form .signup-link a {
-  color: #16a085;
-  text-decoration: none;
-}
-
-form .signup-link a:hover {
-  text-decoration: underline;
-}
