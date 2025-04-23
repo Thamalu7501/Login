@@ -1,5 +1,5 @@
 import React from 'react'
-import  '../Styles/LoginStyle.css'
+import  '../styles/LoginStyle.css'
 function Login() {
   return (
     <div className='container'>
@@ -19,13 +19,12 @@ function Login() {
     {/* <i className="fas fa-lock"></i> */}
     <input type="password" placeholder="Password" required />
   </div>
-  <div className="row button">
+  <div className="login-button">
     <input type="submit" value="Login" />
   </div>
 </form>
+</div> 
 </div>
-      
-    </div>
   )
 }
 
