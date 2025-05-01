@@ -2,15 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
-import Login from './Pages/Login';
-import OrderForm from './Pages/OrderForm';
+import LoginPage from './pages/loginpage'
+import Signup from './pages/signup'
+import Forgot from './pages/forgot'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
-    <Routes>
-      <Route path= '/' element={<Login />} />
-      <Route path= 'OrderForm' element={<OrderForm />} />
-    </Routes>
+        <Routes>
+            <Route path='/' element={<LoginPage />} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/forgot' element={<Forgot />} />
+        </Routes>
     </BrowserRouter>
 );
 
