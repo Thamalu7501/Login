@@ -1,10 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Avatar, Box, Container, Paper, TextField, Typography, Button, Grid, Link } from '@mui/material';
 import LockOutlinedIcon from "@mui/icons-material/LockOutline";
 import { Link as RouterLink } from 'react-router-dom';
+import axios from 'axios';
 
 const Signup = () => {
-    const handleSubmit = () => console.log('signup')
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('');
+    
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const user = { username, password, email };
+        axios.post('http://localhost:8080/register', user)
+            .then((response) => {
+                console.log(response.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
+    
     return (
         <Container maxWidth="xs">
             <Paper elevation={10} sx={{ marginTop: 8, padding: 2 }}>

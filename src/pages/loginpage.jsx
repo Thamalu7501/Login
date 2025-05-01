@@ -1,12 +1,13 @@
 import React from 'react'
-import { Avatar, Box, Container, FormControlLabel, Paper, TextField, Typography, Checkbox, Button, Grid, Link} from '@mui/material';
+import { Avatar, Box, Container, FormControlLabel, Paper, TextField, Typography, Checkbox, Button, Grid, Link } from '@mui/material';
 import LockOutlinedIcon from "@mui/icons-material/LockOutline";
-import {Link as RouterLink} from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
+
 const Login = () => {
   const handleSubmit = () => console.log('login')
   return (
     <Container maxWidth="xs">
-      <Paper elevation={10} sx={{marginTop: 8, padding:2}}>
+      <Paper elevation={10} sx={{ marginTop: 8, padding: 2 }}>
         <Avatar sx={{
           mx: "auto",
           bgcolor: "secondary.main",
@@ -15,30 +16,30 @@ const Login = () => {
         }}>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h5" sx={{textAlign: "center"}}>
+        <Typography component="h1" variant="h5" sx={{ textAlign: "center" }}>
           Sign In
         </Typography>
-        <Box 
+        <Box
           component='form'
           onSubmit={handleSubmit}
-          sx={{mt: 1}}>
-            <TextField 
-              placeholder="Enter username" 
-              fullWidth 
-              required 
-              autoFocus 
-              sx={{mb: 2}} />
-            <TextField 
-              placeholder="Enter password" 
-              fullWidth 
-              required 
-              type='password' />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me" />
-            <Button type='submit' variant='contained' fullWidth sx={{mt: 1}}>Sign In</Button>
+          sx={{ mt: 1 }}>
+          <TextField
+            placeholder="Enter username"
+            fullWidth
+            required
+            autoFocus
+            sx={{ mb: 2 }} />
+          <TextField
+            placeholder="Enter password"
+            fullWidth
+            required
+            type='password' />
+          <FormControlLabel
+            control={<Checkbox value="remember" color="primary" />}
+            label="Remember me" />
+          <Button type='submit' variant='contained' fullWidth sx={{ mt: 1 }}>Sign In</Button>
         </Box>
-        <Grid container justifyContent="space-between" sx={{mt: 1}}>
+        <Grid container justifyContent="space-between" sx={{ mt: 1 }}>
           <Grid item>
             <Link component={RouterLink} to="/forgot" >Forgot Password ?</Link>
           </Grid>
@@ -50,5 +51,5 @@ const Login = () => {
     </Container>
   )
 }
- 
+
 export default Login
